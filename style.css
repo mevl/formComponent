@@ -1,0 +1,46 @@
+.presenter {
+    margin-top: 20px;
+    background-color: #cecece;
+}
+
+.presenter__item {
+    padding: 5px 10px;
+}
+
+.presenter__item_title {
+    padding-right: 10px;
+}
+
+.presenter__item_title:after {
+    content: ':';
+}
+
+.presenter__item_value {
+    font-weight: bold;
+}
+
+.form__input {
+    width: 180px;
+    font-size: 90%;
+    padding: 3px;
+}
+
+.form__input.invalid {
+    border-color: #ff0000;
+}
+
+.form__btn {
+    background-color: #c5c5c5;
+    border: 0;
+    border-radius: 3px;
+    padding: 5px 8px;
+    width: 125px;
+}
+
+.form__btn_main {
+    background-color: #4687cc;
+}
+
+.form-buttons {
+    margin-top: 10px;
+}

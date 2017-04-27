@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 class='js-header'>Форма входа</h2>
+<form class="form js-form" action="/">
+    <div class="form-fields">
+        <input class="form__input" placeholder="ваш логин" type="text" name="login">
+        <input class="form__input" placeholder="ваш пароль" type="password" name="password">
+    </div>
+    <div class="form-buttons">
+        <input type="submit" class="js-submit form__btn form__btn_main" value="Войти" />
+        <input type="button" class="js-reset form__btn" value="Сбросить" />
+        <input type="button" class="js-show-password form__btn" value="Показать пароль" data-hide-text="Скрыть пароль" />
+    </div>
+</form>
+<div class="js-presenter presenter"></div>
+
+<script src="form.js"></script>
+<script src="presenter.js"></script>
+<script>
+  'use strict';
+
+  const presenter = new Presenter({
+    element: document.querySelector('.js-presenter')
+  });
+  const form = new Form({
+    element: document.querySelector('.js-form')
+  });
+  form.setOnSubmitHandler(presenter.render.bind(presenter));
+</script>
+</body>
+</html>
